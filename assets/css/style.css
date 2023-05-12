@@ -1,0 +1,458 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/*
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng 
+ */
+
+ /* Common */
+.text-white{
+    color: #fff !important;
+}
+.clear{
+    clear:both;
+}
+.row{
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.3333%;
+}
+.col-full{
+    width: 100%;
+}
+
+ /* Main */
+#main{
+    font-size: 15px;
+}
+
+#header{
+    height: 46px;
+    background-color: black;
+    left:0;
+    right:0;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1;
+}
+#header a{
+    text-decoration: none;
+}
+#header #search{
+    float: right;
+    cursor: pointer;
+}
+#header #search:hover{
+    background-color: #f44336;
+}
+#header .header-search{
+    color: white;
+    font-size: 16px;
+    line-height: 46px;
+    padding: 0 24px;
+}
+#nav{
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav > li{
+    display: inline-block;
+    position: relative;
+}
+#nav > li > a{
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    color: white;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: inline-block;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color:#000;
+    background-color: #ccc;
+}
+#nav .nav-icons{
+    font-size: 10px;
+}
+#nav li .subnav{
+    position:absolute;
+    top:100%;
+    left:0%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    display: none;
+}
+#nav li:hover .subnav{
+    display:inline-block;
+}
+#nav .subnav a{
+    color: black;
+    min-width: 160px;
+    line-height: 38px;
+    padding: 0 16px;
+    display:block;
+}
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    display: block;
+    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    color: white;
+    position: relative;
+}
+#slider #text-content{
+    position: absolute;
+    bottom:32px;
+    left: 50%;
+    transform:translateX(-50%);
+    text-align: center;
+}
+#slider .text-header{
+    font-weight: 500;
+    font-size: 24px;
+    margin: 5px 0;
+}
+#slider .text-description{
+    padding: 15px 0;
+    font-size: 15px;
+}
+#content{
+    width: 100%;
+    /* padding: 0 16px; */
+    background-color: white;
+}
+#content #About{
+    max-width: 800px;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .heading-content{
+    margin: 10px 0;
+    text-align: center;
+}
+#content .heading{
+    text-transform:uppercase;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+#content .description{
+    margin:15px;
+    opacity: 0.6;
+    font-style: italic;
+}
+#content #The-band-words{
+    text-align: justify;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+#content #info{
+    text-align: center;
+    padding: 32px 0;
+}
+#content .member{
+    width: 33%;
+    text-align: center;
+    display: block;
+    margin: 15px 0;
+    box-sizing: inherit;
+    overflow: hidden;
+}
+#content .name{
+    display: block;
+    padding: 15px 0;
+}
+#content .member-img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+#content #Tour{
+    background-color: black;
+}
+#content #Tour #Tour-content{
+    max-width: 800px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tickets-list{
+    background-color: #fff;
+    /* display: inline-block; */
+    margin-top: 40px ;
+    text-align: left;
+    list-style-type: none;
+}
+.tickets-list li{
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    color: #757575;
+}
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 22px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+.places-list{
+    padding: 32px 8px;
+}
+.place-item{
+    max-width: 33.33%;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    background-color: #fff;
+    padding: 0.15px 16px;
+}
+.place-heading{
+    margin: 15px 0;
+}
+.place-time{
+    margin: 15px 0;
+    opacity: 0.6;
+}
+.place-description{
+    margin: 15px 0;
+    line-height: 1.4;
+}
+.buy-button{
+    text-decoration: none;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    border: none;
+}
+.buy-button:hover{
+    background-color: #ccc;
+    color:#000;
+    cursor: pointer;
+}
+#contact{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+#contact .container{
+    padding: 32px 0;
+    display: block;
+}
+.contact-info{
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+}
+.form .row input{
+    padding: 8px;
+}
+.form row .col-half{
+    padding: 0 8px;
+}
+.contact-form{
+    padding: 0 8px;
+    margin-bottom: 8px;
+}
+.form-control{
+    border: #ccc solid 1px;
+    width: 100%;
+}
+.submit-control{
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    margin: 16px 0; 
+    float: right;
+    margin-right: -8px;
+}
+.submit-control:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+#map .map-img{
+    width: 100%;
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+    align-items: center;
+    color: #000;
+    opacity: 0.6;
+}
+#footer .icon-list{
+    display: inline-block;
+    align-items: left;
+    font-size: 24px;
+    color: #000;
+    letter-spacing: 0px;
+}
+#footer .icon-list a{
+    color: #000;
+    text-decoration: none;
+}
+#footer .source{
+    margin: 15px 0;
+}
+#footer .source a{
+    color: #000;
+}
+/* Modal */
+.modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    z-index: 2;
+}
+.modal.open{
+    display: flex;
+}
+.modal .modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 300px;
+    position: relative;
+    padding: 0.15px 0;
+    animation: modalFadeIn ease 0.5s;
+}
+.modal .modal-container .modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 16px 16px;
+}
+.modal .modal-container .modal-close:hover{
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+.modal .modal-header{
+    background-color: #009688;
+    height: 129px;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.modal .modal-header .icons{
+    margin-right: 16px;
+}
+.modal-body{
+    padding: 0.15px 16px;
+}
+.modal-body .modal-label{
+    display: block;
+    margin: 15px 0;
+}
+.modal-body .modal-input{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 100%;
+    padding: 8px;
+}
+.modal-container #pay-button{
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-style: bold;
+}
+.modal-container #pay-button:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+.modal-footer{
+    display: block;
+    margin: 30px 15px;
+    float: right;
+}
+@keyframes modalFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
